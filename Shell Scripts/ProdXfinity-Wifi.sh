@@ -1,0 +1,13 @@
+snmpset -v2c -c hDaFHJG7 udp6:$1 1.3.6.1.4.1.17270.50.2.14.1.3.0 s 68.85.15.238
+snmpset -v2c -c hDaFHJG7 udp6:$1 1.3.6.1.4.1.17270.50.2.14.1.5.0 s 68.85.6.243
+snmpset -v2c -c hDaFHJG7 udp6:$1 1.3.6.1.4.1.17270.50.2.14.1.6.0 i 44
+snmpset -v2c -c hDaFHJG7 udp6:$1 1.3.6.1.4.1.17270.50.2.2.2.1.1.3.10003 s $2
+snmpset -v2c -c hDaFHJG7 udp6:$1 1.3.6.1.4.1.17270.50.2.2.2.1.1.15.10003 i 1
+snmpset -v2c -c hDaFHJG7 udp6:$1 1.3.6.1.4.1.17270.50.2.2.2.1.1.2.10003 i 1
+snmpset -v2c -c hDaFHJG7 udp6:$1 1.3.6.1.4.1.17270.50.2.2.2.1.1.5.10003 i 2
+snmpset -v2c -c hDaFHJG7 udp6:$1 1.3.6.1.4.1.17270.50.2.2.2.1.1.3.10103 s $3
+snmpset -v2c -c hDaFHJG7 udp6:$1 1.3.6.1.4.1.17270.50.2.2.2.1.1.15.10103 i 1
+snmpset -v2c -c hDaFHJG7 udp6:$1 1.3.6.1.4.1.17270.50.2.2.2.1.1.2.10103 i 1
+snmpset -v2c -c hDaFHJG7 udp6:$1 1.3.6.1.4.1.17270.50.2.2.2.1.1.5.10103 i 2
+snmpset -v2c -c hDaFHJG7 udp6:$1 1.3.6.1.4.1.17270.50.2.13.1.1.0 i 1
+snmpset -v2c -c hDaFHJG7 udp6:$1 1.3.6.1.4.1.17270.50.2.1.1.1003.0 i 3

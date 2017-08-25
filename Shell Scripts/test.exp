@@ -1,0 +1,26 @@
+#!/usr/bin/expect -f
+set ip [lindex $argv 0];
+set f [open "wgetcmd.txt"]
+set wgetcmd [read -nonewline $f]
+close $f
+set g [open "image.txt"]
+set img [read -nonewline $g]
+close $g
+send_user "$ip $wgetcmd"
+spawn ssh -t  smurthy@10.255.215.120 command sudo stbssh $ip
+expect "smurthy@10.255.215.120's password:"
+send "Infy@1234\r"
+expect "root@pacexf3:~#"
+send "cd /tmp\r"
+expect "root@pacexf3:/tmp#"
+send "$wgetcmd\r"
+expect "root@pacexf3:/tmp#"
+send "xf3_sw_install $img\r"
+set timeout 240s
+expect "root@pacexf3:~"
+send "reboot\r"
+expect -re ">"
+set buffer $expect_out(buffer)
+set fid [open upgrade.txt w]
+puts $fid $buffer
+close $fid

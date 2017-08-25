@@ -1,0 +1,15 @@
+#!/usr//bin/expect
+set epon_mac [lindex $argv 0];
+send_user "$epon_mac"
+spawn telnet 10.252.98.36
+expect -re "login:"
+send "smurthy\r"
+expect -re "Password:"
+send "Smurthy123!\r"
+expect -re ">"
+send "show cable modem $epon_mac verbose\r"
+expect -re "--More--"
+set buffer $expect_out(buffer)
+set fid [open vcmip.txt w]
+puts $fid $buffer
+close $fid
